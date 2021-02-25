@@ -34,18 +34,14 @@
 * @DisplayName annotation is used over class and method
 * Used to declare a display name for test class and methods.
 
-JUnit 4 was designed for developers , there was a single fat jar junit.jar
-It was a monolithic architecture. Not modular.
-Build tools like Maven and Gradle and IDEs like Eclipse NetBeans, Intellij they needed separate APIs. But there is only one fat Jar. They ended up using internals of Junit via reflection. Evolving Junit was very much difficult. 
+* JUnit 4 was designed for developers , there was a single fat jar junit.jar. It was a monolithic architecture. Not modular.
+* Build tools like Maven and Gradle and IDEs like Eclipse NetBeans, Intellij they needed separate APIs. But there is only one fat Jar. They ended up using internals of Junit via reflection. Evolving Junit was very much difficult. 
 
-Runners actually run your test cases.  
-You can extend Runner abstract class and implement run method to write your own test execution logic. But involves heavy use of reflection. 
+* Runners actually run your test cases.  
+* You can extend Runner abstract class and implement run method to write your own test execution logic. But involves heavy use of reflection. 
 
-Junit rules intercept test method calls. 
-Allows you to do something before the test method is run and something else after the test method has run. 
-
-We can write a custom rule to add a new behavior before and after the test run.
-
-We might like to start a process before executing a test and stop it after that, or connect to a database before executing a test and tear it down afterward.
+* Junit rules intercept test method calls. 
+* Allows you to do something before the test method is run and something else after the test method has run. 
+* We can write a custom rule to add a new behavior before and after the test run. We might like to start a process before executing a test and stop it after that, or connect to a database before executing a test and tear it down afterward.
 
 
